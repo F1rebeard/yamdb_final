@@ -21,7 +21,7 @@ jobs:
 
     - name: Test with flake8
       run: |
-        python -m flake8
+        flake8
 
     - name: Pytest
       run: |
@@ -48,6 +48,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2
         with:
+          context: ./api_yamdb
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/yamdb_final:latest
 
