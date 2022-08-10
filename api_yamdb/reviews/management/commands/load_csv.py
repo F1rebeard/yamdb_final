@@ -46,7 +46,7 @@ class Command(BaseCommand):
                 delimiter=',',
                 quotechar='"'
             )
-            next(dataReader)
+            next(datareader)
             if model == User:  # Модель юзера нетипична, пришлось ручками
                 print(file + ':')
                 for row in datareader:
