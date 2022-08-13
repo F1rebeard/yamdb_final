@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: capta1nfirebeard/api_yamdb:latest
+    image: capta1nfirebeard/api_yamdb_web:latest
     restart: always
     volumes:
       - static_value:/app/static/
@@ -29,6 +29,7 @@ services:
       - media_value:/var/html/media/
     depends_on:
       - web
+
 
 volumes:
   static_value:
